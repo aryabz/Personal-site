@@ -1,0 +1,23 @@
+body{
+    background-color: #050d1a;
+    color: white;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.header{
+    text-align: center;
+}
+.hellow{
+    color: white;
+}
+.menu{
+    font-size: 38px;
+}
+nav img{
+    width: 30px;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 4rem  0;
+}
