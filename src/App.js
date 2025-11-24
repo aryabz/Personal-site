@@ -159,7 +159,7 @@ function Project() {
 
 
 
-      <Swiper spaceBetween={2} slidesPerView={2} loop={true}>
+      <Swiper spaceBetween={2} slidesPerView={2.5} loop={true}>
         <SwiperSlide>
           <div className="project-img">
 

@@ -28,6 +28,7 @@ nav{
  display: flex;
  align-items: center;
  gap: 1rem;
+ margin: 3rem 0 0 0;
 }
 .lineLight {
     background: #ff0080;
