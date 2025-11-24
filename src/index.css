@@ -32,7 +32,6 @@ nav{
 .lineLight {
     background: #ff0080;
     border-radius: 12px;
-    width: 200px;
     height: 2px;
     background: #8E1616;
     animation: glow 1.5s infinite alternate;
@@ -53,9 +52,19 @@ nav{
     gap: 1rem;
   }
   .icon-logo{
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
     background-color: rgba(255, 0, 0, 0.4);
     padding: 1rem;
     border-radius: 10px;
+  }
+  .project{
+    display: flex;
+    gap: 1rem;
+  }
+
+  .project-img{
+    width: 100px;
+    height: 200px;
+    background-color: #8E1616;
   }
