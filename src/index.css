@@ -21,3 +21,41 @@ nav{
     justify-content: space-between;
     margin: 0 0 4rem  0;
 }
+.skill{
+    font-family: "Trirong", serif;
+}
+.header-skill{
+ display: flex;
+ align-items: center;
+ gap: 1rem;
+}
+.lineLight {
+    background: #ff0080;
+    border-radius: 12px;
+    width: 200px;
+    height: 2px;
+    background: #8E1616;
+    animation: glow 1.5s infinite alternate;
+  }
+  
+  @keyframes glow {
+    from {
+      box-shadow: 0 0 10px #ff0080;
+    }
+    to {
+      box-shadow: 0 0 25px #ff0080;
+    }
+  }
+  .wrapper__icone-skill{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .icon-logo{
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 0, 0, 0.4);
+    padding: 1rem;
+    border-radius: 10px;
+  }
