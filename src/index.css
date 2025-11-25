@@ -50,7 +50,8 @@ nav{
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 1.7rem;
+    max-width: 400px;
   }
   .icon-logo{
     width: 30px;
@@ -68,4 +69,17 @@ nav{
     width: 100px;
     height: 200px;
     background-color: #8E1616;
+  }
+  .wrapper__button-header{
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem 0 0 0;
+
+  }
+
+  .button-header{
+    font-size: 1rem;
+    box-shadow: rgba(142, 22, 22, 0.7) 0px 4px 12px;
   }

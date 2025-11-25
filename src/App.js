@@ -34,7 +34,7 @@ export default function App() {
   return (
     <div>
       <Nav />
-      <div style={{ height: " 150px" }}>
+      <div style={{ height: " 250px" }}>
         <Introduction
           height="20vh"
           color="#8E1616"
@@ -270,7 +270,24 @@ function Introduction({
           </span>
         </h1>
         <p>Hi, I'm Aria, I'm 18 years old. I've been working and learning in the MERN stack for 2 years. I really enjoy expanding my knowledge of programming and staying up to date with the latest developments in the industry. </p>
+
+        <div className="wrapper__button-header">
+          <Button width={"45%"} height={"45px"} color={"rgb(142, 22, 22)"} bgcolor={"rgb(255, 255, 255)"} borderRadius={"10px"} >
+            contact me
+          </Button>
+          <Button width={"45%"} height={"45px"} color={"#ffff"} bgcolor={"#8e1616"} borderRadius={"10px"} >
+            Download pdf
+          </Button>
+
+        </div>
       </div>
     </div>
   );
+}
+
+
+function Button({ width = "200px", height = "20px", color = "red", bgcolor = "#ffff", borderRadius, children }) {
+  return (
+    <button className="button-header" style={{ width, height, color, background: bgcolor, borderRadius, border: "none" }}> {children}</button>
+  )
 }
