@@ -43,7 +43,7 @@ export default function App() {
   return (
     <div>
       <Nav />
-      <div style={{ height: " 250px" }}>
+      <div style={{ height: "300px" }}>
         <Introduction
           height="20vh"
           color="#8E1616"
@@ -318,7 +318,7 @@ function Introduction({
         margin: "0 auto",
         zIndex: 1,
         color: "#fff",
-        fontSize: "16px",
+        fontSize: "14px",
         textAlign: "center"
       }}>
 
