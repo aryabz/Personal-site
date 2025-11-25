@@ -172,7 +172,7 @@ function Project() {
         <SwiperSlide>
 
           <PortfolioCard
-            image="1.png"
+            image="Shop-selling.png"
             title="Shop selling"
             description="The store for the sale of smart systems, HTML, CSS  "
             link={"https://github.com/aryabz/Shop-selling-smart-systems"}
@@ -182,7 +182,7 @@ function Project() {
         </SwiperSlide>
         <SwiperSlide>
           <PortfolioCard
-            image="2.png"
+            image="MovieRater.png"
             title="MovieRater"
             description="A React app to search, rate, and save movies."
             link={"https://github.com/aryabz/MovieRater"}
@@ -191,7 +191,7 @@ function Project() {
         </SwiperSlide>
         <SwiperSlide>
           <PortfolioCard
-            image="3.png"
+            image="code-jpp.png"
             title="code jpp"
             description="Static educational site with html and css"
             link={"https://github.com/aryabz/codejpp"}
