@@ -5,9 +5,17 @@
 import { useEffect, useState } from "react";
 import { Particles, initParticlesEngine } from "@tsparticles/react";
 
-import { Swiper, SwiperSlide } from "swiper/react";
 import 'animate.css';
-import "swiper/css";
+
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+
+import { Navigation } from 'swiper/modules';
+
+
+
 
 import { ReactTyped } from "react-typed";
 import "bootstrap-icons/font/bootstrap-icons.css";
@@ -40,19 +48,20 @@ export default function App() {
           height="20vh"
           color="#8E1616"
           size={1}
-          number={300}
-          speed={0.7}
+          number={250}
+          speed={0.2}
         />
       </div>
       <Skill />
       <Project />
+      <ContactForm />
     </div>
   )
 }
 function Nav() {
   return (
     <nav>
-      <img src="./logoa.png" alt="" />
+      <img src="./logo.jpg" alt="" />
       <div className="menu">
         <i class="bi bi-list"></i>
       </div>
@@ -168,13 +177,18 @@ function Project() {
 
 
 
-      <Swiper spaceBetween={90} slidesPerView={2.5} loop={true}>
+      <Swiper modules={[Navigation]}
+        spaceBetween={150}
+        slidesPerView={2.5}
+        loop={true}
+        navigation
+        pagination={{ clickable: true }}>
         <SwiperSlide>
 
           <PortfolioCard
-            image="Shop-selling.png"
+            image="Shop-selling-min.png"
             title="Shop selling"
-            description="The store for the sale of smart systems, HTML, CSS  "
+            description="store for the sale of smart systems, HTML, CSS  "
             link={"https://github.com/aryabz/Shop-selling-smart-systems"}
           />
 
@@ -182,7 +196,7 @@ function Project() {
         </SwiperSlide>
         <SwiperSlide>
           <PortfolioCard
-            image="MovieRater.png"
+            image="MovieRater-min.png"
             title="MovieRater"
             description="A React app to search, rate, and save movies."
             link={"https://github.com/aryabz/MovieRater"}
@@ -191,7 +205,7 @@ function Project() {
         </SwiperSlide>
         <SwiperSlide>
           <PortfolioCard
-            image="code-jpp.png"
+            image="code-jpp-min.png"
             title="code jpp"
             description="Static educational site with html and css"
             link={"https://github.com/aryabz/codejpp"}
@@ -325,14 +339,16 @@ function Introduction({
           <button className="button-header
           animate__animated  
           animate__fadeInLeft
-          animate__delay-25ms 
+          animate__delay-70ms 
     animate__slower" style={{ color: "rgb(142, 22, 22)", background: "rgb(255, 255, 255)" }}   >
-            contact me
+            <a href="#contact" style={{ textDecoration: "none", color: "rgb(142, 22, 22)" }}>
+              contact me
+            </a>
           </button>
           <button className="button-header 
      animate__animated 
      animate__fadeInRight
-    animate__delay-25ms 
+    animate__delay-70ms 
     animate__slower
     " style={{ color: "#ffff", background: "#8e1616", }}  >
             Download pdf
@@ -345,13 +361,109 @@ function Introduction({
 }
 
 
-// function Button({ width = "200px", height = "20px", color = "red", bgcolor = "#ffff", borderRadius, children }) {
-//   return (
-//     <button className="button-header 
-//      animate__animated 
-//      animate__backInLeft
-//     animate__delay-0.1s 
-//     animate__slower
-//     " style={{ width, height, color, background: bgcolor, borderRadius, border: "none" }}> {children}</button>
-//   )
-// }
+function ContactForm() {
+  return (
+    <div style={styles.wrapper} id="contact">
+      <div style={styles.container}>
+        <h2 style={styles.title}>Get in Touch</h2>
+        <p style={styles.subtitle}>
+          Have a question or want to work together? Send me a message!
+        </p>
+
+        <form style={styles.form}>
+          <input
+            style={styles.input}
+            type="text"
+            placeholder="Your Name"
+            required
+          />
+
+          <input
+            style={styles.input}
+            type="email"
+            placeholder="Email Address"
+            required
+          />
+
+          <textarea
+            style={styles.textarea}
+            placeholder="Your Message"
+            required
+          />
+
+          <button style={styles.button} type="submit">
+            Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+  );
+}
+
+const styles = {
+  wrapper: {
+    display: "flex",
+    justifyContent: "center",
+    padding: "40px",
+    margin: "3rem 0",
+  },
+  container: {
+    width: "100%",
+    maxWidth: "420px",
+    background: "rgba(255, 0, 0, 0.14)",
+    padding: "25px",
+    borderRadius: "16px",
+    boxShadow: "0 8px 25px rgba(0,0,0,0.1)",
+    backdropFilter: "blur(10px)",
+    textAlign: "center",
+    fontFamily: "Poppins, sans-serif",
+  },
+  title: {
+    fontSize: "26px",
+    marginBottom: "5px",
+    fontWeight: "600",
+    color: "#333",
+  },
+  subtitle: {
+    fontSize: "14px",
+    color: "#666",
+    marginBottom: "20px",
+  },
+  form: {
+    display: "flex",
+    flexDirection: "column",
+    gap: "14px",
+  },
+  input: {
+    padding: "12px",
+    fontSize: "14px",
+    borderRadius: "10px",
+    border: "1px solid #ccd3e0",
+    outline: "none",
+    transition: "0.3s",
+  },
+  textarea: {
+    padding: "12px",
+    height: "130px",
+    borderRadius: "10px",
+    border: "1px solid #ccd3e0",
+    resize: "none",
+    outline: "none",
+    transition: "0.3s",
+  },
+  button: {
+    padding: "12px",
+    background: "#69070f",
+    color: "#fff",
+    border: "none",
+    borderRadius: "10px",
+    fontSize: "15px",
+    cursor: "pointer",
+    transition: "0.3s",
+  }
+};
+
+
+
+
+
