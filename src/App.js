@@ -65,7 +65,12 @@ function Skill() {
     <div>
       <div className="header-skill">
         <LIneLight />
-        <h2 className="skill animate__backInLeft">Skill</h2>
+        <h2 className="skill 
+        animate__animated 
+        animate__flipInX
+            animate__delay-1s 
+    animate__slower
+        ">Skill</h2>
         <LIneLight />
       </div>
 
@@ -151,7 +156,10 @@ function Project() {
   return (
     <div>
       <div className="header-skill">
-        <h2>Project</h2>
+        <h2 className="animate__animated 
+        animate__fadeInLeft
+            animate__delay-3s 
+    animate__slower">Project</h2>
         <LIneLight size="100%" />
 
       </div>
@@ -163,7 +171,7 @@ function Project() {
       <Swiper spaceBetween={2} slidesPerView={2.5} loop={true}>
         <SwiperSlide>
           <div className="project-img">
-
+            <img src="1.png" alt="" style={{ width: "100px" }} />
             <h2>projrct site</h2>
           </div>
 
@@ -275,15 +283,15 @@ function Introduction({
         <div className="wrapper__button-header">
           <button className="button-header
           animate__animated  
-          animate__backInRight
-          animate__delay-0.10ms 
+          animate__fadeInLeft
+          animate__delay-25ms 
     animate__slower" style={{ color: "rgb(142, 22, 22)", background: "rgb(255, 255, 255)" }}   >
             contact me
           </button>
           <button className="button-header 
      animate__animated 
-     animate__backInLeft
-    animate__delay-0.10ms 
+     animate__fadeInRight
+    animate__delay-25ms 
     animate__slower
     " style={{ color: "#ffff", background: "#8e1616", }}  >
             Download pdf
