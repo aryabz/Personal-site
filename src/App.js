@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { Particles, initParticlesEngine } from "@tsparticles/react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
+import 'animate.css';
 import "swiper/css";
 
 import { ReactTyped } from "react-typed";
@@ -64,7 +65,7 @@ function Skill() {
     <div>
       <div className="header-skill">
         <LIneLight />
-        <h2 className="skill">Skill</h2>
+        <h2 className="skill animate__backInLeft">Skill</h2>
         <LIneLight />
       </div>
 
@@ -272,12 +273,21 @@ function Introduction({
         <p>Hi, I'm Aria, I'm 18 years old. I've been working and learning in the MERN stack for 2 years. I really enjoy expanding my knowledge of programming and staying up to date with the latest developments in the industry. </p>
 
         <div className="wrapper__button-header">
-          <Button width={"45%"} height={"45px"} color={"rgb(142, 22, 22)"} bgcolor={"rgb(255, 255, 255)"} borderRadius={"10px"} >
+          <button className="button-header
+          animate__animated  
+          animate__backInRight
+          animate__delay-0.10ms 
+    animate__slower" style={{ color: "rgb(142, 22, 22)", background: "rgb(255, 255, 255)" }}   >
             contact me
-          </Button>
-          <Button width={"45%"} height={"45px"} color={"#ffff"} bgcolor={"#8e1616"} borderRadius={"10px"} >
+          </button>
+          <button className="button-header 
+     animate__animated 
+     animate__backInLeft
+    animate__delay-0.10ms 
+    animate__slower
+    " style={{ color: "#ffff", background: "#8e1616", }}  >
             Download pdf
-          </Button>
+          </button>
 
         </div>
       </div>
@@ -286,8 +296,13 @@ function Introduction({
 }
 
 
-function Button({ width = "200px", height = "20px", color = "red", bgcolor = "#ffff", borderRadius, children }) {
-  return (
-    <button className="button-header" style={{ width, height, color, background: bgcolor, borderRadius, border: "none" }}> {children}</button>
-  )
-}
+// function Button({ width = "200px", height = "20px", color = "red", bgcolor = "#ffff", borderRadius, children }) {
+//   return (
+//     <button className="button-header 
+//      animate__animated 
+//      animate__backInLeft
+//     animate__delay-0.1s 
+//     animate__slower
+//     " style={{ width, height, color, background: bgcolor, borderRadius, border: "none" }}> {children}</button>
+//   )
+// }

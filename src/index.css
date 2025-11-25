@@ -80,6 +80,10 @@ nav{
   }
 
   .button-header{
+    width: 45%;
+     height: 45px;
+     border-radius: 10px;
+      border: none;
     font-size: 1rem;
     box-shadow: rgba(142, 22, 22, 0.7) 0px 4px 12px;
   }
