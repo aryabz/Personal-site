@@ -168,25 +168,35 @@ function Project() {
 
 
 
-      <Swiper spaceBetween={2} slidesPerView={2.5} loop={true}>
+      <Swiper spaceBetween={90} slidesPerView={2.5} loop={true}>
         <SwiperSlide>
-          <div className="project-img">
-            <img src="1.png" alt="" style={{ width: "100px" }} />
-            <h2>projrct site</h2>
-          </div>
+
+          <PortfolioCard
+            image="1.png"
+            title="Shop selling"
+            description="The store for the sale of smart systems, HTML, CSS  "
+            link={"https://github.com/aryabz/Shop-selling-smart-systems"}
+          />
+
 
         </SwiperSlide>
         <SwiperSlide>
-          <div className="project-img">
+          <PortfolioCard
+            image="2.png"
+            title="MovieRater"
+            description="A React app to search, rate, and save movies."
+            link={"https://github.com/aryabz/MovieRater"}
 
-            <h2>projrct site</h2>
-          </div>
+          />
         </SwiperSlide>
         <SwiperSlide>
-          <div className="project-img">
+          <PortfolioCard
+            image="3.png"
+            title="code jpp"
+            description="Static educational site with html and css"
+            link={"https://github.com/aryabz/codejpp"}
 
-            <h2>projrct site</h2>
-          </div>
+          />
         </SwiperSlide>
       </Swiper>
 
@@ -214,6 +224,37 @@ function IconLogo({ children }) {
     </div>
   )
 }
+
+
+
+
+const PortfolioCard = ({ image, title, description, link }) => {
+  return (
+    <div className="portfolio-card">
+      <img src={image} alt={title} className="portfolio-card-image" />
+
+      <div className="portfolio-card-content">
+        <h3>{title}</h3>
+        <p>{description}</p>
+
+        {link && (
+          <a href={link} target="_blank" rel="noopener noreferrer" style={{ background: "#69070f" }}>
+            View Project
+          </a>
+        )}
+      </div>
+    </div>
+  );
+};
+
+
+
+
+
+
+
+
+
 
 
 
