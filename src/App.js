@@ -43,12 +43,11 @@ export default function App() {
   return (
     <div>
       <Nav />
-      <div style={{ height: "300px" }}>
+      <div style={{ height: "300px", display: "flex", alignItems: "center" }}>
         <Introduction
-          height="20vh"
           color="#8E1616"
           size={1}
-          number={250}
+          number={350}
           speed={0.2}
         />
       </div>
@@ -61,7 +60,7 @@ export default function App() {
 function Nav() {
   return (
     <nav>
-      <img src="./logo.jpg" alt="" />
+      <img src="photo22281514822-min.jpg" alt="" />
       <div className="menu">
         <i class="bi bi-list"></i>
       </div>
@@ -410,7 +409,7 @@ const styles = {
   container: {
     width: "100%",
     maxWidth: "420px",
-    background: "rgba(255, 0, 0, 0.14)",
+    background: "linear-gradient(359deg,rgb(5, 13, 26) 0%, rgb(127, 21, 22) 100%, rgb(142, 22, 22) 100%, rgb(142, 22, 22) 60%)",
     padding: "25px",
     borderRadius: "16px",
     boxShadow: "0 8px 25px rgba(0,0,0,0.1)",
