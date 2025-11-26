@@ -66,16 +66,16 @@ function Nav() {
 
 function Skill() {
   return (
-    <div style={{ display: "flex", alignItems: "center", flexDirection: "column" }}>
+    <div style={{ display: "flex", alignItems: "center", flexDirection: "column", overflow: "hidden" }}>
       <div className="header-skill">
-        <LIneLight Addclass={"animate__fadeInLeft"} />
+        <LIneLight size="40%" Addclass={"animate__fadeInLeft"} />
         <h2 className="skill 
         animate__animated 
         animate__flipInX
             animate__delay-1s 
     animate__slower
         ">Skill</h2>
-        <LIneLight Addclass={"animate__fadeInRight"} />
+        <LIneLight size="40%" Addclass={"animate__fadeInRight"} />
       </div>
 
       <div className="wrapper__icone-skill">
@@ -185,7 +185,7 @@ function Project() {
         title="Shop selling"
         description="store for the sale of smart systems, HTML, CSS  "
         link={"https://github.com/aryabz/Shop-selling-smart-systems"}
-        animate={"animate__backInLeft"}
+
       />
 
 
@@ -196,7 +196,7 @@ function Project() {
         title="MovieRater"
         description="A React app to search, rate, and save movies."
         link={"https://github.com/aryabz/MovieRater"}
-        animate={"animate__backInRight"}
+
 
       />
       {/* </SwiperSlide> */}
@@ -206,7 +206,7 @@ function Project() {
         title="code jpp"
         description="Static educational site with html and css"
         link={"https://github.com/aryabz/codejpp"}
-        animate={"animate__backInLeft"}
+
       />
       {/* </SwiperSlide>
       </Swiper> */}
@@ -248,11 +248,9 @@ function IconLogo({ children }) {
 
 
 
-const PortfolioCard = ({ image, title, description, link, animate }) => {
+const PortfolioCard = ({ image, title, description, link }) => {
   return (
-    <div className={`portfolio-card animate__animated animate__delay-10ms 
-animate__slower
-  ${animate}`}>
+    <div className={`portfolio-card `}>
       <img src={image} alt={title} className="portfolio-card-image" />
 
       <div className="portfolio-card-content">

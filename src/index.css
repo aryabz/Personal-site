@@ -29,6 +29,7 @@ display: flex;
 align-items: center;
 gap: 1rem;
 margin: 3rem 0 0 0;
+width: 100%;
 }
 .lineLight {
   background: #ff0080;
@@ -157,8 +158,9 @@ padding: 2rem 0 0 0;
   }
 
   .portfolio-card-image {
-    width: 100%;
+    width: 300px;
     height: 100%;
+    overflow: hidden;
   }
 }
 /*  */
