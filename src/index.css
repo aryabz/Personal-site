@@ -182,3 +182,51 @@ padding: 2rem 0 0 0;
 :root {
   --swiper-navigation-color: rgb(100, 100, 100); /* رنگ دلخواه شما */
 }
+
+.menu-head{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background: #423e3e;
+  right: 0;
+  width: 200px;
+  height: 100vh;
+  left: -200px;
+  padding: 1rem 0;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+
+}
+.change-color{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin: 1rem;
+
+}
+.change-color span{
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: block;
+  border: 1px solid #fff;
+}
+
+.linkme{
+  line-height: 3;
+}
+.linkme i{
+  margin: 1.5rem;
+}
+
+.linkme i a{
+  color: #fff;
+  margin: 0.5rem;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.disable{
+  left: 0;
+  transition: all 0.2s ease-in-out;
+}

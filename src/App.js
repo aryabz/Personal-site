@@ -23,8 +23,7 @@ import { loadSlim } from "@tsparticles/slim";
 
 
 
-const colorAsl = "#001BB7"
-
+const colorAsl = "#8E1616"
 
 
 
@@ -36,9 +35,10 @@ const colorAsl = "#001BB7"
 
 
 export default function App() {
+  const [FlagNavbar, setFlagNavbar] = useState(true)
   return (
     <div>
-      <Nav />
+      <Nav setFlagNavbar={setFlagNavbar} />
       <div style={{ height: "180px", display: "flex", alignItems: "center" }}>
         <Introduction
           color={colorAsl}
@@ -50,15 +50,16 @@ export default function App() {
       <Skill />
       <Project />
       <ContactForm />
+      <MenuHead FlagNavbar={FlagNavbar} />
     </div>
   )
 }
-function Nav() {
+function Nav({ setFlagNavbar }) {
   return (
     <nav>
       <img src="photo22281514822-min.jpg" alt="" />
-      <div className="menu">
-        <i class="bi bi-list"></i>
+      <div className="menu" >
+        <i class="bi bi-list" onClick={() => setFlagNavbar(e => !e)}></i>
       </div>
     </nav>
   )
@@ -471,6 +472,32 @@ const styles = {
 };
 
 
+function MenuHead({ FlagNavbar }) {
+  return (
+    <div className={`menu-head ${!FlagNavbar && "disable"}`}>
 
+      <div className="linkme">
+        <i class="bi bi-github"><a href="github.com/aryabz">aryabz</a></i><br />
+        <i class="bi bi-linkedin"><a href="https://www.linkedin.com/in/aryabz/">aryabz</a></i><br />
+        <i class="bi bi-telegram"><a href="https://t.me/aryabz_official">aryabz_official</a></i><br />
+        <i class="bi bi-twitter-x"><a href="x.com/aryabz_official">aryabz_official</a></i><br />
+        <i class="bi bi-chat-left"><a href="https://rubika.ir/aryabz_official">aryabz_official</a></i><br />
+        <i class="bi bi-instagram"><a href="https://Instagram.com/aryabz_official">aryabz_official</a></i>
+      </div>
+
+      <hr />
+
+      <div className="change-color">
+        <span style={{ background: "rgb(0, 27, 183)" }}></span>
+        <span style={{ background: "rgb(0, 27, 183)" }}></span>
+        <span style={{ background: "rgb(0, 27, 183)" }}></span>
+        <span style={{ background: "rgb(0, 27, 183)" }}></span>
+        <span style={{ background: "rgb(0, 27, 183)" }}></span>
+        <span style={{ background: "rgb(0, 27, 183)" }}></span>
+
+      </div>
+    </div>
+  )
+}
 
 
