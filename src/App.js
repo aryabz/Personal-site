@@ -38,7 +38,7 @@ export default function App() {
   const [FlagNavbar, setFlagNavbar] = useState(true)
   return (
     <div>
-      <Nav setFlagNavbar={setFlagNavbar} />
+      <Nav setFlagNavbar={setFlagNavbar} FlagNavbar={FlagNavbar} />
       <div style={{ height: "180px", display: "flex", alignItems: "center" }}>
         <Introduction
           color={colorAsl}
@@ -54,12 +54,13 @@ export default function App() {
     </div>
   )
 }
-function Nav({ setFlagNavbar }) {
+function Nav({ FlagNavbar, setFlagNavbar }) {
   return (
     <nav>
       <img src="photo22281514822-min.jpg" alt="" />
       <div className="menu" >
-        <i class="bi bi-list" onClick={() => setFlagNavbar(e => !e)}></i>
+
+        <i class={`bi ${FlagNavbar ? "bi-list" : "bi-x-lg"}`} onClick={() => setFlagNavbar(e => !e)}></i>
       </div>
     </nav>
   )
@@ -418,7 +419,7 @@ const styles = {
     width: "100%",
     maxWidth: "420px",
 
-    background: "linear-gradient(359deg, rgba(5, 13, 26,0.1) 0%, rgb(0, 27, 183) 100%, rgb(0, 27, 183) 100%, rgb(0, 27, 183) 60%)",
+    background: `linear-gradient(359deg, rgba(5, 13, 26,0.1) 0%, ${colorAsl} 100%, rgb(0, 27, 183) 100%, rgb(0, 27, 183) 60%)`,
     padding: "25px",
     borderRadius: "16px",
     boxShadow: "0 8px 25px rgba(0,0,0,0.1)",
