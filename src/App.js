@@ -43,8 +43,8 @@ export default function App() {
         <Introduction
           color={colorAsl}
           size={1}
-          number={350}
-          speed={0.2}
+          number={450}
+          speed={0.5}
         />
       </div>
       <Skill />
