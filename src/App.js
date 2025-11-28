@@ -335,8 +335,8 @@ function Introduction({
           <span style={{ color: colorAsl }}>
             <ReactTyped
               strings={[`aryabz`, " AryaBarzegar"]}
-              typeSpeed={70}
-              backSpeed={50}
+              typeSpeed={120}
+              backSpeed={90}
               loop
             />
           </span>
