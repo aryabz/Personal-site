@@ -292,7 +292,7 @@ const PortfolioCard = ({ image, title, description, link }) => {
 
 
 function Introduction({
-  height = "50vh",      // ارتفاع پیش‌فرض
+  height = "40vh",      // ارتفاع پیش‌فرض
   color = "#ffffff",    // رنگ پیش‌فرض ذرات
   size = 2,             // اندازه ذرات
   number = 50,          // تعداد ذرات
@@ -338,28 +338,31 @@ function Introduction({
         zIndex: 1,
         color: "#fff",
         fontSize: "14px",
-        textAlign: "center"
+        textAlign: "center",
+        lineHeight: "0.8",
+
       }}>
 
 
-        <h1>hi , I'm &nbsp;
+        <h1 style={{ fontSize: "32px" }}>hi , I'm &nbsp;
           <span style={{ color: colorAsl }}>
             <ReactTyped
-              strings={[`aryabz`, " AryaBarzegar"]}
+              strings={[`Aryabz`, " Arya"]}
               typeSpeed={120}
               backSpeed={90}
-              loop
+            // loop
             />
           </span>
         </h1>
-        <p style={{ lineHeight: 1.5 }}>Hi, I'm Arya, I'm 18 years old. I've been working and learning in the MERN stack for 2 years. I really enjoy expanding my knowledge of programming and staying up to date with the latest developments in the industry. </p>
+        <h2 style={{ color: colorAsl, fontSize: "24px" }}>MERN Stack Developer</h2>
+        <p style={{ lineHeight: 1.5, fontSize: "16px" }}>Building web apps with clean code, modern technologies, and solid user experience </p>
 
         <div className="wrapper__button-header">
           <button className="button-header
           animate__animated  
           animate__fadeInLeft
           animate__delay-70ms 
-    animate__slower" style={{ color: "rgb(142, 22, 22)", background: "rgb(255, 255, 255)" }}   >
+    animate__slower" style={{ color: colorAsl, background: "transparent" }}   >
             <a href="#contact" style={{ textDecoration: "none", color: colorAsl }}>
               contact me
             </a>
