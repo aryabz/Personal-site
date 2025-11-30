@@ -252,7 +252,7 @@ function IconLogo({ children }) {
     animate__fadeIn 
     animate__delay-1s 
     
-    animate__slower`} style={{ backgroundColor: colorAsl }}>
+    animate__slower`} >
       {children}
     </div>
   )
