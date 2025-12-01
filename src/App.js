@@ -463,6 +463,9 @@ const styles = {
     border: "1px solid #ccd3e0",
     outline: "none",
     transition: "0.3s",
+    background: " #0a0a0a",
+    border: "1px solid #333",
+    color: "rgb(102, 102, 102)",
   },
   textarea: {
     padding: "12px",
