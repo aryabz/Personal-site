@@ -432,9 +432,8 @@ const styles = {
   container: {
     width: "100%",
     maxWidth: "420px",
-
-    background: `linear-gradient(359deg, rgba(5, 13, 26,0.1) 0%, ${colorAsl} 100%, rgb(0, 27, 183) 100%, rgb(0, 27, 183) 60%)`,
     padding: "25px",
+    background: "#111111",
     borderRadius: "16px",
     boxShadow: "0 8px 25px rgba(0,0,0,0.1)",
     backdropFilter: "blur(10px)",
@@ -445,7 +444,7 @@ const styles = {
     fontSize: "26px",
     marginBottom: "5px",
     fontWeight: "600",
-    color: "#fff",
+    color: colorAsl,
   },
   subtitle: {
     fontSize: "14px",
