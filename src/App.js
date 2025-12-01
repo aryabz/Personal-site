@@ -23,7 +23,7 @@ import { loadSlim } from "@tsparticles/slim";
 
 
 
-const colorAsl = "#e63946"
+const colorAsl = "#00a8e8"
 
 
 
@@ -48,6 +48,7 @@ export default function App() {
         />
       </div>
       <Skill />
+      <About />
       <Project />
       <ContactForm />
       <MenuHead FlagNavbar={FlagNavbar} />
@@ -164,6 +165,26 @@ function Skill() {
       </div>
 
 
+    </div>
+  )
+}
+
+function About() {
+  return (
+    <div>
+      <div className="header-skill">
+        <h2>About me</h2>
+        <LIneLight size="67%" />
+      </div>
+      <div className="about">
+        I’m a 17-year-old MERN Stack developer with 2 years of consistent experience in building web applications. I started coding because I wanted to create things that are practical, useful, and capable of solving real problems.
+        <br />
+        <br />
+        My focus is on clean structure, understanding the core of each challenge, and developing reliable solutions. I’m detail-oriented, and I keep refining a project until both the functionality and the design reach a standard I’m satisfied with.
+        <br />
+        <br />
+        My current goal is to grow into a full-stack developer and work on projects that deliver real value—whether in a team, as a freelancer, or through my own personal work.
+      </div>
     </div>
   )
 }
@@ -506,12 +527,9 @@ function MenuHead({ FlagNavbar }) {
       <hr />
 
       <div className="change-color">
-        <span style={{ background: "rgb(0, 27, 183)" }}></span>
-        <span style={{ background: "rgb(0, 27, 183)" }}></span>
-        <span style={{ background: "rgb(0, 27, 183)" }}></span>
-        <span style={{ background: "rgb(0, 27, 183)" }}></span>
-        <span style={{ background: "rgb(0, 27, 183)" }}></span>
-        <span style={{ background: "rgb(0, 27, 183)" }}></span>
+        <span style={{ background: "#e63946" }}></span>
+        <span style={{ background: "#00a8e8" }}></span>
+        <span style={{ background: "#7c3aed" }}></span>
 
       </div>
     </div>
