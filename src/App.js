@@ -38,19 +38,22 @@ export default function App() {
   const [FlagNavbar, setFlagNavbar] = useState(true)
   return (
     <div>
-      <Nav setFlagNavbar={setFlagNavbar} FlagNavbar={FlagNavbar} />
-      <div style={{ height: "180px", display: "flex", alignItems: "center" }}>
-        <Introduction
-          color={colorAsl}
-          size={1}
-          number={300}
-          speed={0.4}
-        />
+      <div style={{ margin: "0.5rem" }}>
+        <Nav setFlagNavbar={setFlagNavbar} FlagNavbar={FlagNavbar} />
+        <div style={{ height: "180px", display: "flex", alignItems: "center" }}>
+          <Introduction
+            color={colorAsl}
+            size={1}
+            number={300}
+            speed={0.4}
+          />
+        </div>
+        <Skill />
+        <About />
+        <Project />
+        <ContactForm />
       </div>
-      <Skill />
-      <About />
-      <Project />
-      <ContactForm />
+      <Footer />
       <MenuHead FlagNavbar={FlagNavbar} />
     </div>
   )
@@ -173,8 +176,8 @@ function About() {
   return (
     <div>
       <div className="header-skill">
-        <h2>About me</h2>
-        <LIneLight size="67%" />
+        <h2>About</h2>
+        <LIneLight size="100%" />
       </div>
       <div className="about">
         I’m a 17-year-old MERN Stack developer with 2 years of consistent experience in building web applications. I started coding because I wanted to create things that are practical, useful, and capable of solving real problems.
@@ -515,25 +518,39 @@ function MenuHead({ FlagNavbar }) {
   return (
     <div className={`menu-head ${!FlagNavbar && "disable"}`}>
 
-      <div className="linkme">
+
+
+
+    </div>
+  )
+}
+
+function Link() {
+  return (
+    <div className="linkme">
+      <div>
         <i class="bi bi-github"><a href="github.com/aryabz">aryabz</a></i><br />
         <i class="bi bi-linkedin"><a href="https://www.linkedin.com/in/aryabz/">aryabz</a></i><br />
         <i class="bi bi-telegram"><a href="https://t.me/aryabz_official">aryabz_official</a></i><br />
+      </div>
+      <div>
         <i class="bi bi-twitter-x"><a href="x.com/aryabz_official">aryabz_official</a></i><br />
         <i class="bi bi-chat-left"><a href="https://rubika.ir/aryabz_official">aryabz_official</a></i><br />
         <i class="bi bi-instagram"><a href="https://Instagram.com/aryabz_official">aryabz_official</a></i>
       </div>
 
-      <hr />
 
-      <div className="change-color">
-        <span style={{ background: "#e63946" }}></span>
-        <span style={{ background: "#00a8e8" }}></span>
-        <span style={{ background: "#7c3aed" }}></span>
-
-      </div>
     </div>
   )
 }
 
 
+function Footer() {
+  return (
+    <div className="footer">
+      <div>
+        <Link />
+      </div>
+    </div>
+  )
+}
