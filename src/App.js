@@ -162,7 +162,7 @@ function Skill() {
 
 
         <IconLogo>
-          <img src="icons8-express-js-50.png" style={{ width: "40px" }} />
+          <img src="icons8-express-js-50.png" alt="Express.js" style={{ width: "40px" }} />
           <span>Express.js</span>
         </IconLogo>
       </div>
