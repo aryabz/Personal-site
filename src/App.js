@@ -23,7 +23,7 @@ import { loadSlim } from "@tsparticles/slim";
 
 
 
-const colorAsl = "#00a8e8"
+const colorAsl = "#f4b400"
 
 
 
@@ -44,8 +44,8 @@ export default function App() {
           <Introduction
             color={colorAsl}
             size={1}
-            number={300}
-            speed={0.4}
+            number={250}
+            speed={0.2}
           />
         </div>
         <Skill />
@@ -162,7 +162,7 @@ function Skill() {
 
 
         <IconLogo>
-          {/* <img src="icons8-express-js-50.png" style={{ width: "40px" }} /> */}
+          <img src="icons8-express-js-50.png" style={{ width: "40px" }} />
           <span>Express.js</span>
         </IconLogo>
       </div>

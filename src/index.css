@@ -252,7 +252,6 @@ padding: 2rem 0 0 0;
   backdrop-filter: blur(10px);
 }
 .footer{
-  width: 100%;
   background: #111;
   backdrop-filter: blur(10px);
   padding: 3rem 1rem 3rem;
