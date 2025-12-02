@@ -23,7 +23,7 @@ import { loadSlim } from "@tsparticles/slim";
 
 
 
-const colorAsl = "#f4b400"
+const colorAsl = "#00ff7f"
 
 
 
